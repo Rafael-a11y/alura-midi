@@ -2,7 +2,11 @@
 function tocarSom(audio)
 {
     const som = document.querySelector(`#som_${audio}`);
-    if(som != null && som.localName === "audio") som.play();
+    if(som != null && som.localName === "audio") 
+    {
+        som.currentTime = 0;
+        som.play();
+    }
     else console.log("Elemento não é um audio ou não existe");
     
 }
